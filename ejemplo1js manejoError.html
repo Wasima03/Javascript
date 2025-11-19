@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script>
+                //Vamos a decalarar automáticamente la variable "marcaCoche"
+                marcaCoche='MG';
+
+                //Iniciamos una sentencia if
+                if (marcaCoche=="MG"){
+
+                    /**
+                     * Declaramos dos  variables en su bloque de codigo:
+                     * Una con var que podremos usar fuera del if
+                     * y otra con let que sólo podremos usar dentro del if
+                     **/
+
+                     var modeloCoche= 'ZS'
+                     let versionCoche='luxury'
+
+                     console.log("Dentro del if")
+                     console.log("Marca: ",marcaCoche)
+                     console.log("Modelo: ",modeloCoche)
+                     console.log("Versión: ",versionCoche)
+                }
+
+                console.log("Fuera del if")
+                console.log("Marca: ",marcaCoche)
+                console.log("Modelo: ",modeloCoche)
+
+
+                /*Manejamos el error para que el ejemplo no falle usando la estrucutra try - catch */
+
+                try{
+                    console.log("Versión",versionCoche)
+
+                }catch(error){
+                    console.log("Version del coche no definida / no se pude acceder a la variable porque existe sólo dentro del if")
+                }
+
+            </script>
+        </head>
+        <body>
+            <h2>Demo Javascript en &lt; Head &gt;</h2>
+            <p>Abre la consola</p>
+        </body>
+    </html>
