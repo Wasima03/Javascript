@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //no se puede poner a null una variable
+        //si hago esto,me pone que null es de tipo Object pero no null
+        console.log(typeof(null))
+
+        let fecha = new Date()
+        console.log(fecha instanceof String)
+        //como fecha no es una variable de tipo String si no de Date, pone false
+
+        let x="hola"
+        let y= new String("hola")
+        console.log(x instanceof String) //aquí no funciona
+        console.log(y instanceof String) //aquí sí
+
+        semaforo="verde"
+        if(semaforo="verde"){
+            console.log("paso")
+        }
+        else if(semaforo="amarillo"){
+            console.log("paso con precaución")
+        }
+        else{
+            console.log("no paso")
+        }
+        
+
+        switch(new Date().getDay()) {
+            case 0:
+                dia = "Domingo";
+                break;
+            case 1:
+                dia = "Lunes"
+                break;
+            case 2:
+                dia = "Martes"
+                break;
+            case 3:
+                dia = "Miércoles"
+                break;
+            case 4:
+                dia = "Jueves"
+                break;
+            case 5:
+                dia = "Viernes"
+                break;
+            case 6:
+                dia = "Sábado"
+                break
+        }
+
+
+        frutas=["manzana","pera","fresa","uva"]
+        var cont=0
+        for(x in frutas){
+            cont+=1
+            console.log(cont,"-",frutas[x])
+        }
+        const persona = {
+            nombre:"Wasima",
+            apellido:"El Ouastani",
+            saludo : function() {
+                console.log("Hola soy",this.nombre,this.apellido)
+            }
+
+        }
+        let cuenta ={
+            titular:"Wasima",
+            saldo:100,
+            ingresar(cantidad){
+                this.saldo+=cantidad
+            },
+            mostrarSaldo(){
+                console.log("Saldo actual: ",this.saldo)
+            }
+        }
+    
+        cuenta.ingresar(-50)
+        cuenta.mostrarSaldo()
+
+        persona.saludo()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
